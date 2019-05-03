@@ -72,7 +72,7 @@ EM.run do
             https.use_ssl = true
             https.start do |https|
                 # Issue を作る API: http://developer.github.com/v3/issues/#create-an-issue
-                req = Net::HTTP::Post.new('/repos/naberina/slack_issue/issues')
+                req = Net::HTTP::Post.new('/repos/githubアカウント名/リポジトリ名/issues')
                 req.basic_auth ENV['GITHUB_USERNAME'],ENV['GITHUB_PASSWORD']
                 issue_info = {
                 'title': "#{slack_response['message']["text"]}",
